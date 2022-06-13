@@ -14,6 +14,6 @@ jobs :
                      - name : run_script
                        run : source ./.github/scripts/sample.sh
                      - name : set up expressions
-                       run : echo test success
+                       run : echo ${{ toJSON(github) }}
                        if : contains(fromJSON('["shu", "chan"]'),'shu')
                      - run : env                
