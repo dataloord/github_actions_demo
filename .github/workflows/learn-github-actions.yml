@@ -14,5 +14,7 @@ jobs :
                        run : echo $my_name
                        env:
                          my_name : dataloord
+                     - name : Give_permission to execute
+                       run : chmod +x ./.github/scripts/sample.sh
                      - name : run_script
-                       run : source ./.github/scripts/sample.sh
+                       run : ./.github/scripts/sample.sh
