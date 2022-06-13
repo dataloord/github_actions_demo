@@ -15,4 +15,4 @@ jobs :
                        env:
                          my_name : dataloord
                      - name : run_script
-                       run : ./.github/scripts/sample.sh
+                       run : source ./.github/scripts/sample.sh
