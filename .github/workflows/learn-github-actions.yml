@@ -5,11 +5,6 @@ jobs :
                    runs-on : ubuntu-latest
                    steps :
                      - uses : actions/checkout@v3
-                     - uses : actions/setup-node@v3
-                       with :
-                         node-version : '14'
-                     - run : npm install -g bats
-                     - run : bats -v
                      - name : test_env
                        run : echo $my_name
                        env:
@@ -18,3 +13,11 @@ jobs :
                        run : chmod +x ./.github/scripts/sample.sh
                      - name : run_script
                        run : ./.github/scripts/sample.sh
+                     - name : set up expressions
+                       env :
+                         my_null : ${{ null }}
+                         my_num : ${{ 89 }}
+                         my_bool : ${{ true }}
+                         my_string : Hello World
+                       run : env
+                
