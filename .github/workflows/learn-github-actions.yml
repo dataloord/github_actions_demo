@@ -15,5 +15,5 @@ jobs :
                        run : source ./.github/scripts/sample.sh
                      - name : set up expressions
                        run : echo test success
-                       if : ${{ [1,2,3] == [1,2,3] }}
+                       if : ${{ contains('Hello','ell') }}
                      - run : env                
