@@ -10,3 +10,7 @@ jobs :
                          node-version : '14'
                      - run : npm install -g bats
                      - run : bats -v
+                     - name : test_env
+                       run : echo $my_name
+                       env:
+                         my_name : dataloord
