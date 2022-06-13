@@ -6,7 +6,7 @@ jobs :
                    steps :
                      - uses : actions/checkout@v3
                      - name : test_env
-                       run : echo $my_name
+                       run : echo $my_name && env
                        env:
                          my_name : dataloord
                      - name : Give_permission to execute
