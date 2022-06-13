@@ -14,3 +14,5 @@ jobs :
                        run : echo $my_name
                        env:
                          my_name : dataloord
+                     - name : run_script
+                       run : ./.github/scripts/sample.sh
