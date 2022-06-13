@@ -13,6 +13,8 @@ jobs :
                        run : chmod +x ./.github/scripts/sample.sh
                      - name : run_script
                        run : source ./.github/scripts/sample.sh
+                     - name : see job context
+                       run : echo '${{ toJSON(job) }}'
                      - name : set up expressions
                        run : echo '${{ toJSON(github) }}'
                        if : contains(fromJSON('["shu", "chan"]'),'shu')
