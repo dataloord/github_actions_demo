@@ -15,5 +15,5 @@ jobs :
                        run : source ./.github/scripts/sample.sh
                      - name : set up expressions
                        run : echo test success
-                       if : ${{ contains('Hello','ell') }}
+                       if : ${{ contains(("Hello" "ell" ),'ell') }}
                      - run : env                
