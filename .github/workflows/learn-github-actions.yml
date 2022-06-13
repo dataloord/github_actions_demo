@@ -14,6 +14,6 @@ jobs :
                      - name : run_script
                        run : source ./.github/scripts/sample.sh
                      - name : set up expressions
-                       run : ${{ list_1 == list_2 }}
-                     - run : ${{ list_1 == list_3 }}
+                       run : ${{ $list_1 == $list_2 }}
+                     - run : ${{ $list_1 == $list_3 }}
                 
