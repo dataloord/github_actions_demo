@@ -12,12 +12,8 @@ jobs :
                      - name : Give_permission to execute
                        run : chmod +x ./.github/scripts/sample.sh
                      - name : run_script
-                       run : ./.github/scripts/sample.sh
+                       run : source ./.github/scripts/sample.sh
                      - name : set up expressions
-                       env :
-                         my_null : ${{ null }}
-                         my_num : ${{ 89 }}
-                         my_bool : ${{ true }}
-                         my_string : Hello World
-                       run : env
+                       run : ${{ list_1 == list_2 }}
+                     - run : ${{ list_1 == list_3 }}
                 
